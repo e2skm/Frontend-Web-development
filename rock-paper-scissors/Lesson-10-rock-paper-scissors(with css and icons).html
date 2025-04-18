@@ -1,0 +1,51 @@
+<!--Lessson 10: Rock Paper Scissors with css and icons-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Rock, Paper, Scissors
+    </title>
+    <link rel="stylesheet" href="styles/10_Rock_Paper_Scissors.css">
+  </head>
+  <body>
+    <p class="title">
+      Play a game of rock paper scissors against the computer
+    </p>
+    <button title="Click to select Rock" onclick="
+    playGame('Rock');" class="move-button">
+      <img src="images/Rock-emoji.png" class="move-icon">
+    </button>
+
+    <button title="Click to select Paper" onclick="
+    playGame('Paper');" class="move-button">
+    <img src="images/Paper-emoji.png" class="move-icon">
+    </button>
+
+    <button title="Click to select Scissors" onclick="
+    playGame('Scissors');" class="move-button">
+    <img src="images/Scissors-emoji.png" class="move-icon">
+    </button>
+
+    <p class="js-result result">
+
+    </p>
+    <p class="js-moves">
+      
+
+    </p>
+    <p class="js-score score">
+
+    </p>
+
+    <button title="Click to reset score" onclick="
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0; 
+    localStorage.removeItem('score');
+    updateScoreElement();" class="reset-score-button">
+      Reset Score
+    </button>
+    
+    <script src="scripts/10_Rock_Paper_Scissors.js"></script>
+  </body>
+</html>
