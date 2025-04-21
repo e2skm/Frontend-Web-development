@@ -1,0 +1,62 @@
+/* Lesson 10: Calulator with event listener */
+body{
+  font-family: Arial;
+  background-color: black;
+}
+.calculator{
+  background-color: white;
+  padding: 10px;
+  border-radius: 12px;
+  width: 257px;
+  height: 475px;
+}
+
+button{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  cursor: pointer;
+  color: white;
+  border: none;
+  padding: 6px;
+  margin: 3px;
+}  
+.screen{
+  background-color: rgb(25,25,25);
+  color: white;
+  border: none;
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24px;
+  line-height: 60px;
+  padding: 0 10px;
+  box-sizing: border-box;
+} 
+ 
+.del-button{
+  background-color: red;
+}
+.del-button:active{
+  color: red;
+  background-color: white;
+  border: 2px solid red;
+}
+.operations-button{
+  background-color: orange;
+}
+.operations-button:active{
+  color: orange;
+  background-color: white;
+  border: 2px solid orange;
+}
+.number-button{
+  background-color: rgb(25,25,25);
+}
+.number-button:active{
+  color: rgb(25,25,25);
+  background-color: white;
+  border: 2px solid rgb(25,25,25);
+}
