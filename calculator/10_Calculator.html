@@ -1,0 +1,91 @@
+<!-- Lesson 10: Calulator -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      My Online Calculator
+    </title>
+    <link rel="stylesheet" href="styles/10_Calculator.css">
+  </head>
+  <body>
+    <div class="calculator">
+      <p class="js-screen screen">
+        
+
+      </p>
+      <p>
+        <button class="del-button" title="Click to clear calculation" onclick="handleButtonClick('del');">
+          AC
+        </button>
+        <button onclick="handleButtonClick('%');" class="operations-button">
+          %
+        </button>
+        <button onclick="handleButtonClick('(');" class="operations-button">
+          (
+        </button>
+        <button onclick="handleButtonClick(')');" class="operations-button">
+          )
+        </button>
+      </p>
+      <p>
+        <button onclick="handleButtonClick('7');" class="number-button">
+          7
+        </button>
+        <button onclick="handleButtonClick('8');" class="number-button">
+        8     
+        </button>
+        <button onclick="handleButtonClick('9');" class="number-button">
+          9
+        </button>
+        <button onclick="handleButtonClick(' / ');" class="operations-button">
+          /
+        </button>
+      </p>
+      <p>
+        <button onclick="handleButtonClick('4');" class="number-button">
+          4
+        </button>
+        <button onclick="handleButtonClick('5');" class="number-button">
+          5
+        </button>
+        <button onclick="handleButtonClick('6');" class="number-button">
+          6
+        </button>
+        <button onclick="handleButtonClick(' * ');" class="operations-button">
+          *
+        </button>
+      </p>
+  
+      <p>
+        <button onclick="handleButtonClick('1');" class="number-button">
+          1
+        </button>
+        <button onclick="handleButtonClick('2');" class="number-button">
+          2
+        </button>
+        <button onclick="handleButtonClick('3');" class="number-button">
+          3
+        </button>
+        <button onclick="handleButtonClick(' - ');" class="operations-button">
+          -
+        </button>
+      </p>
+      
+      <p>
+        <button onclick="handleButtonClick('0');" class="number-button">
+          0
+        </button>
+        <button onclick="handleButtonClick('.');" class="operations-button">
+          .
+        </button>  
+        <button onclick="handleButtonClick(' + ');" class="operations-button">
+          +
+        </button>
+        <button onclick="handleButtonClick('=');" class="operations-button">
+          =
+        </button>
+      </p>
+    </div>
+    <script src="scripts/10_Calculator.js"></script>
+  </body>
+</html>
