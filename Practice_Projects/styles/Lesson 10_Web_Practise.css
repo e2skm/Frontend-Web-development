@@ -1,0 +1,33 @@
+/* Lesson 10: Web Practise */
+button{
+  cursor: pointer;
+}
+.amazon-button{
+  background-color: rgb(255,216,20);
+  font-size: 15px;
+  padding: 6px 30px;
+  border: none;
+  border-radius: 20px;
+}
+.request-now-button, .schedule-for-later-button{
+  font-family: Arial;
+  font-weight:700;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+.schedule-for-later-button{
+  background-color: rgb(230,230,230);
+  margin-left: 12px;
+}
+.music-button, .gaming-button, .tech-button{
+  background-color: rgb(230,230,230);
+  margin-left: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+.request-now-button, .is-toggled{
+  background-color: black;
+  color: white;
+}
