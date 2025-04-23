@@ -1,0 +1,32 @@
+/*  Lesson 11: Todo list  */
+body{
+  font-family: Arial;
+}
+button{
+  cursor: pointer;
+  color: white;
+  border: none;
+  font-size: 15px;
+}
+.todo-grid, .todo-input-grid{
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+.todo-grid{
+  margin-top: 10px;
+  align-items: center;
+}
+.due-date-input, .name-input{
+  font-size: 15px;
+  padding: 6px;
+}
+.add-todo-button{
+  background-color: green;
+}
+.delete-todo-button{
+  background-color: darkred;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
