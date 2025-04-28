@@ -1,0 +1,50 @@
+<!--Lessson 12: Rock Paper Scissors with css, icons and autoplay-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Rock, Paper, Scissors
+    </title>
+    <link rel="stylesheet" href="styles/12_Rock_Paper_Scissors.css">
+  </head>
+  <body>
+    <p class="title">
+      Play a game of rock paper scissors against the computer
+    </p>
+    <button title="Click to select Rock" class="move-button js-rock-button">
+      <img src="images/Rock-emoji.png" class="move-icon">
+    </button>
+
+    <button title="Click to select Paper"  class="move-button js-paper-button">
+    <img src="images/Paper-emoji.png" class="move-icon">
+    </button>
+    <button title="Click to select Scissors" class="move-button js-scissors-button">
+    <img src="images/Scissors-emoji.png" class="move-icon">
+    </button>
+
+    <p class="js-result result">
+
+    </p>
+    <p class="js-moves">
+      
+
+    </p>
+    <p class="js-score score">
+
+    </p>
+
+    <button title="Click to reset score" class="reset-score-button js-reset-score-button">
+      Reset Score
+    </button>
+    <button class="auto-play-button js-auto-play-button" title="Click to enable/disable autoplay">
+      Auto Play
+    </button>
+    <div class="js-confirmation confirmation-message" >
+    <p class="confirmation-question">Are you sure you want to reset the score?</p>
+    <button class="js-confirm-yes confirm-button">Yes</button>
+    <button class="js-confirm-no confirm-button">No</button>
+    </div>
+    
+    <script src="scripts/12.1_Rock_Paper_Scissors.js"></script>
+  </body>
+</html>
