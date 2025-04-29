@@ -97,7 +97,8 @@ document.querySelector('.js-confirm-yes').addEventListener('click', () => {
 document.querySelector('.js-confirm-no').addEventListener('click', () => {
   hideConfirmation();
 });
-
+// Invoke function to hide the confirmation message
+hideConfirmation();
 
 // Main game function
 function playGame(playerMove){
