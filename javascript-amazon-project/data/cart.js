@@ -1,2 +1,2 @@
 // Data Structure to store cart
-const cart = [];
+export const cart = [];
