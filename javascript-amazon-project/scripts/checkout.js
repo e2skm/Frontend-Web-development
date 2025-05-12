@@ -122,7 +122,9 @@ function updateCartQuantity(){
   document.querySelector('.js-cart-quantity').innerText = `${cartQuantity} items`;
 }
 // Invoke function to display cart quantity
-updateCartQuantity();
+setInterval(() => {
+  updateCartQuantity();
+});
 
 
 
