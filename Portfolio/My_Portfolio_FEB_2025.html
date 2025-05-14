@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itumeleng Sekoma | Portfolio</title>
+    <link rel="stylesheet" href="styles/My_Portfolio_FEB_2025.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="hero">            
+            <div class="hero-content">
+                <h1>Hi, I am Itumeleng Sekoma</h1>
+                <div>
+                    <span class="roles" id="role">                   
+                    </span>
+                    <span class="cursor">&nbsp;</span>
+                </div>
+                <a href="#portfolio" class="btn">View My Work</a>
+            </div>
+            <img src="images/Profile.jpg"
+             alt="Itumeleng Sekoma" class="hero-image">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Welcome to my portfolio website, my name is Itumeleng Sekoma. I was born and raised in Pretoria.
+             I am an aspiring Data/Business Analyst with a passion for finding patterns and trends in data to help organizations achieve their objectives.
+              I graduated from TUT with a Diploma in Informatics. I enjoy working with people to achieve mutual goals. My hobbies include playing soccer, 
+              jogging, watching podcasts, and movies. I love staying active during my free time outside of work. I am currently job hunting.</p>
+        <a href="documents/Mr_Sekoma_CV_AATE.pdf
+        " download="MR_I_SEKOMA_CV.pdf" target="_blank" class="btn">Download My CV</a>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2>My Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <img src="images/Kalafong_Hospital.jpeg" alt="Project 1">
+                <div class="project-content">
+                    <h3>Project 1: Kalafong Hospital</h3>
+                    <h4>Database System for Public Hospital</h4>
+                    <p>Our objective was to build a Database System for Kalafong Hospital, which faced challenges with record-keeping. 
+                        The hospital used an outdated file system where patient files were regularly lost. 
+                        We developed a modern database system to address these issues.
+                    <a href="documents/Kalafong Hospital Project2 ISD316D.pdf" 
+                    download="Kalafong_Project_Documentation.pdf" 
+                    target="_blank" class="btn">Download Project Documentation</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="images/TUT.png" alt="Project 2">
+                <div class="project-content">
+                    <h3>Project 2: Technical Services System</h3>
+                    <h4>System for Reporting Technical Issues</h4>
+                    <p>We developed the Technical Services System (TSS) to allow TUT staff members to report technical issues easily. 
+                        The system streamlined the process of reporting and resolving issues, improving efficiency and reducing response times.</p>                    
+                    <a href="documents/Copy of TECHNICAL SERVICE.pdf"
+                     download="Technical_Services_Project_Documentation.pdf" 
+                    target="_blank" class="btn">Download Project Documentation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>My Work Experience</h2>
+        <div class="experiences">
+            <div class="experience">
+                <img src="images/ICEP.jpeg" alt="ICEP Internship">
+                <div class="experience-content">
+                    <h3>Informatics Community Engagement Programme</h3>
+                    <h4>Business Analyst | Scrum Master Intern</h4>
+                    <h4>Duration: 6 Months (Feb 2023 - Jul 2023)</h4>
+                    <p>As a Scrum Master Intern, I hosted daily scrum meetings, tracked team progress, and updated the product backlog.
+                         As a Business Analyst, I documented system requirements and created visualizations using tools like Trello, MS Office, 
+                         and Lucidchart.</p>
+                </div>
+            </div>
+            <div class="experience">
+                <img src="images/UVU Africa (Capaciti).jpeg" alt="Capaciti Internship">
+                <div class="experience-content">
+                    <h3>UVU Africa (Capaciti)</h3>
+                    <h4>Data Analytics Intern</h4>
+                    <h4>Duration: 9 Months (Mar 2024 - Nov 2024)</h4>
+                    <p>As a Data Analytics Intern, I clean and analyze data, create dashboards, and present findings. I also built a few machine learning models.
+                         I used Python, Visual Studio Code, Jupyter Notebook, and Anaconda for data analysis and visualization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <h3>Data Analysis</h3>
+                <p>Python, SQL, Java, Excel, PowerBI</p>
+            </div>
+            <div class="skill">
+                <h3>Scrum Master</h3>
+                <p>Trello, Slack , Scrum Artifacts </p>
+            </div>
+            <div class="skill">
+                <h3>Frontend Web Development </h3>
+                <p>HTML, CSS, JavaScript</p>
+            </div>
+            <div class="skill">
+                <h3>Business Analysis</h3>
+                <p>Powerpoint, Word, Drawio, Elicitating Information, Root Cause Analysis, Analysing Requirements, Designing Solution</p>
+            </div>            
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="mailto:sekomaitumeleng@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email Address" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Itumeleng Sekoma. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/itumeleng-sekoma-633a1a243" target="_blank">LinkedIn</a>
+            <a href="https://github.com/e2skm" target="_blank">GitHub</a>
+        </div>
+    </footer>
+
+    <script src="scripts/My_Portfolio_FEB_2025.js"></script>
+</body>
+</html>
