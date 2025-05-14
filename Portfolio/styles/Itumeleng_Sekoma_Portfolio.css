@@ -1,0 +1,232 @@
+/* Basic CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Navbar */
+nav {
+  background-color: #333;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero.jpg') no-repeat center center/cover;
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+}
+
+
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+}
+
+.hero .btn {
+  padding: 10px 20px;
+  background: #333;
+  color: white;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+/* About Section */
+#about {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+#about h2 {
+  margin-bottom: 20px;
+}
+
+#about p {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Project Section */
+.projects {
+  display: flex;
+  flex-direction: column; /* Aligns the projects vertically */
+  gap: 20px; /* Space between each project */
+}
+
+.project {
+  display: flex;
+  align-items: flex-start; /* Align items at the start of the container */
+  gap: 20px; /* Space between the image and the description */
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.project img {
+  max-width: 300px; /* Adjust image width as needed */
+  height: auto;
+  border-radius: 10px;
+}
+
+#portfolio h2 {
+  text-align: center;
+}
+
+.project h3, .project h4, .project p, .project a {
+  margin: 0;
+}
+
+.project p {
+  margin-top: 10px;
+  color: #333;
+}
+
+.project .btn {
+  margin-top: 15px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .project {
+      flex-direction: column; /* Stacks the content vertically on smaller screens */
+      text-align: center;
+  }
+
+  .project img {
+      max-width: 100%;
+      margin-bottom: 15px;
+  }
+}
+/* Experience Section */
+.experiences {
+  display: flex;
+  flex-direction: column; /* Aligns the projects vertically */
+  gap: 20px; /* Space between each project */
+}
+
+.experience {
+  display: flex;
+  align-items: flex-start; /* Align items at the start of the container */
+  gap: 20px; /* Space between the image and the description */
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.experience img {
+  max-width: 300px; /* Adjust image width as needed */
+  height: auto;
+  border-radius: 10px;
+}
+
+#experience h2 {
+  text-align: center;
+}
+
+/* Align text content on the right side of the image */
+.experience-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience h3 {
+  margin: 0;
+}
+
+.experience h4 {
+  margin: 5px 0; /* Add some space between the h3 and h4 tags */
+}
+
+.experience p {
+  margin-top: 10px;
+  color: #333;
+}
+
+.experience .btn {
+  margin-top: 15px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .experience {
+      flex-direction: column; /* Stacks the content vertically on smaller screens */
+      text-align: center;
+  }
+
+  .experience img {
+      max-width: 100%;
+      margin-bottom: 15px;
+  }
+}
+/* Contact Section */
+#contact {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+#contact form {
+  max-width: 600px;
+  margin: auto;
+}
+
+#contact input, #contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+#contact button {
+  padding: 10px 20px;
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+
+footer .social-icons a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
