@@ -1,0 +1,27 @@
+body {
+  font-family: Arial;
+}
+
+.weight-and-height {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  width: 100px;
+}
+
+button {
+  cursor: pointer;
+  padding: 5px;
+}
+
+#calculate-button {
+  width: 100px;
+  margin-top: 10px;
+}
+
+.required {
+  color: red;
+}
