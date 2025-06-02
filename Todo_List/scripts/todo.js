@@ -9,12 +9,25 @@ function saveToLocalStorage() {
   localStorage.setItem('todoList', JSON.stringify(todoList));
 }
 
+// Helper function to sort tasks by date and time
+function sortTasksByDateTime(tasks) {
+  return tasks.sort((a, b) => {
+    // Combine date and time for comparison
+    const dateTimeA = new Date(`${a.dueDate} ${a.dueTime || '00:00'}`);
+    const dateTimeB = new Date(`${b.dueDate} ${b.dueTime || '00:00'}`);
+    return dateTimeA - dateTimeB;
+  });
+}
+
 function renderTodoList() {
   if (!document.querySelector('.js-todo-list')) return;
   
   let todoListHtml = '';
   
-  todoList.forEach((todoObject, index) => {
+  // Sort tasks before rendering
+  const sortedTasks = sortTasksByDateTime(todoList);
+  
+  sortedTasks.forEach((todoObject, index) => {
     const { id, name, dueDate, dueTime } = todoObject;
     const html = `
       <div class="task-card" draggable="true" data-task-id="${id}">
@@ -130,7 +143,10 @@ function renderTaskList(tasks, containerId) {
   const container = document.getElementById(containerId);
   container.innerHTML = '';
   
-  tasks.forEach(task => {
+  // Sort tasks before rendering
+  const sortedTasks = sortTasksByDateTime(tasks);
+  
+  sortedTasks.forEach(task => {
     const taskElement = document.createElement('div');
     taskElement.className = 'task-card';
     taskElement.draggable = true;
@@ -178,4 +194,3 @@ document.querySelector('.js-nav-to-track').addEventListener('click', () => windo
 
 // Initialize
 renderTodoList();
-
