@@ -48,13 +48,14 @@ const observer = new IntersectionObserver(entries => {
 sections.forEach(section => {
   observer.observe(section);
 });
-// Has something to do with read more
+
+// Read more functionality
 document.addEventListener('DOMContentLoaded', function () {
   const readMoreButtons = document.querySelectorAll('.read-more-btn');
 
   readMoreButtons.forEach(button => {
       button.addEventListener('click', function () {
-          const paragraph = this.previousElementSibling; // Get the paragraph before the button
+          const paragraph = this.previousElementSibling;
           if (paragraph.classList.contains('truncated-text')) {
               paragraph.classList.remove('truncated-text');
               this.textContent = 'Read Less';
@@ -65,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   });
 });
+
 // Function to organize tasks by date and time from earliest to latest
 function sortTasksByDateTime(tasks) {
   return tasks.sort((a, b) => {
@@ -74,4 +76,26 @@ function sortTasksByDateTime(tasks) {
     return dateTimeA - dateTimeB;
   });
 }
-// Function 
+
+// Theme toggle functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const themeToggleBtn = document.getElementById("theme-toggle");
+  const themeIcon = document.getElementById("theme-icon");
+
+  // Load theme from storage
+  const savedTheme = localStorage.getItem("theme") || "light";
+  document.body.classList.toggle("dark", savedTheme === "dark");
+  
+  // Set initial icon based on theme
+  themeIcon.src = savedTheme === "dark" 
+      ? "icons/sun.png" 
+      : "icons/moon.png";
+
+  themeToggleBtn.addEventListener("click", () => {
+    const isDark = document.body.classList.toggle("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    themeIcon.src = isDark 
+        ? "icons/sun.png" 
+        : "icons/moon.png";
+  });
+});
