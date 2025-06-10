@@ -302,6 +302,19 @@ nav ul li a:hover {
   margin-bottom: 10px;
   transition: color 0.3s;
 }
+.experience-content h3 a {
+    text-decoration: none;
+    color: inherit; /* inherit text color so it looks like regular text */
+    pointer-events: none; /* disable link interaction until hover */
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.experience-content h3:hover a {
+    color: #007BFF; /* or any link color you prefer */
+    text-decoration: underline;
+    pointer-events: auto; /* enable link interaction on hover */
+    cursor: pointer;
+}
 
 .experience h4 {
   font-size: 1.2rem;
