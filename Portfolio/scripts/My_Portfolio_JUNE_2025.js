@@ -77,25 +77,31 @@ function sortTasksByDateTime(tasks) {
   });
 }
 
-// Theme toggle functionality
+// Theme toggle functionality with dynamic tooltip
 document.addEventListener("DOMContentLoaded", () => {
   const themeToggleBtn = document.getElementById("theme-toggle");
   const themeIcon = document.getElementById("theme-icon");
 
   // Load theme from storage
   const savedTheme = localStorage.getItem("theme") || "light";
-  document.body.classList.toggle("dark", savedTheme === "dark");
-  
-  // Set initial icon based on theme
-  themeIcon.src = savedTheme === "dark" 
-      ? "icons/sun.png" 
-      : "icons/moon.png";
+  const isDarkMode = savedTheme === "dark";
+  document.body.classList.toggle("dark", isDarkMode);
+
+  // Set initial icon, alt and tooltip
+  themeIcon.src = isDarkMode ? "icons/sun.png" : "icons/moon.png";
+  themeIcon.alt = isDarkMode ? "Light mode icon" : "Dark mode icon";
+  themeIcon.title = isDarkMode
+    ? "Click to switch to light mode"
+    : "Click to switch to dark mode";
 
   themeToggleBtn.addEventListener("click", () => {
     const isDark = document.body.classList.toggle("dark");
     localStorage.setItem("theme", isDark ? "dark" : "light");
-    themeIcon.src = isDark 
-        ? "icons/sun.png" 
-        : "icons/moon.png";
+
+    themeIcon.src = isDark ? "icons/sun.png" : "icons/moon.png";
+    themeIcon.alt = isDark ? "Light mode icon" : "Dark mode icon";
+    themeIcon.title = isDark
+      ? "Click to switch to light mode"
+      : "Click to switch to dark mode";
   });
 });
