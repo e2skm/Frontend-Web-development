@@ -1,0 +1,114 @@
+body {
+  font-family: Arial;
+  margin: 20px;
+}
+
+button {
+  cursor: pointer;
+  color: white;
+  border: none;
+  font-size: 15px;
+}
+
+.nav-button, .add-todo-button {
+  background-color: #4CAF50;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.todo-grid, .todo-input-grid{
+  display: grid;
+  row-gap: 10px;
+  align-items: center;
+}
+
+.todo-input-grid {
+  margin-bottom: 10px;
+  grid-template-columns: 200px 150px 100px 100px 100px;
+  column-gap: 10px;
+}
+.todo-grid {
+  grid-template-columns: 205px 205px 205px 205px 205px 205px;
+  column-gap: 12px;
+}
+
+.due-date-input, .name-input, .due-time-input, .complexity-input {
+  font-size: 15px;
+  padding: 6px;
+}
+
+.add-todo-button {
+  background-color: green;
+}
+
+.delete-todo-button {
+  background-color: darkred;
+  padding: 10px;
+}
+
+.edit-todo-button {
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.done-todo-button {
+  background-color: limegreen;
+  padding: 10px;
+}
+
+.task-card {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  user-select: none;
+}
+
+.current-score, .daily-score{
+  margin: 0;
+}
+
+.title-and-score-data{
+  display: grid;
+  grid-template-columns: 200px 300px 1fr 200px;
+  justify-content: space-between;
+}
+
+.today-list-title{
+  display: inline-block;
+}
+
+.count-down{
+  justify-content: center;
+}
+
+.count-down-container {
+  display: grid;
+  grid-template-columns: 145px 150px;
+  align-items: center;
+  gap: 15px;
+}
+
+.countdown-display {
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
+}
+
+.count-down {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.countdown-toggle {
+  background-color: #2196F3;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
+}
