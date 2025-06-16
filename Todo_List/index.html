@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Today List</title>
+  <link rel="stylesheet" href="styles/today_list.css">
+</head>
+<body>
+  <div class="title-and-score-data">
+    <h1 class="today-list-title">Today List</h1>
+    <div class="count-down-container">
+      <button class="countdown-toggle js-countdown-toggle">Show Countdown</button>
+      <div class="countdown-display js-countdown-display">
+        <p><span class="count-down"></span> hours left</p>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <th>Total tasks for today</th>
+        <th>Tasks left</th>
+        <th>Tasks completed</th>
+        <th>Completion rate</th>
+      </tr>
+      <tr>
+        <td class="js-total-daily-tasks">0</td>
+        <td class="js-pending-tasks">0</td>
+        <td class="js-completed-tasks">0</td>
+        <td class="js-completion-rate">0%</td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <th>Total Daily points:</th>
+        <td class="js-daily-score daily-score">0 pts</td>
+      </tr>
+      <tr>
+        <th>Current points:</th>
+        <td class="js-current-score current-score">0 pts</td>
+      </tr>
+    </table>
+  </div>  
+  <div class="todo-input-grid">
+    <input class="js-name-input name-input" type="text" placeholder="Task name">
+    <input class="js-due-date-input due-date-input" type="date">
+    <input class="js-due-time-input due-time-input" type="time">
+    <select class="js-complexity-input complexity-input">
+      <option selected value="1">Level 1</option>
+      <option value="2">Level 2</option>
+      <option value="3">Level 3</option>
+      <option value="4">Level 4</option>
+      <option value="5">Level 5</option>
+    </select>
+    <button class="add-todo-button js-add-todo-button">
+      Add
+    </button>
+  </div>
+  <div class="js-todo-list todo-grid"></div>
+
+  <script src="scripts/today_list.js"></script>
+</body>
+</html>
