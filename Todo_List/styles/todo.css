@@ -1,0 +1,80 @@
+body {
+  font-family: Arial;
+  margin: 20px;
+}
+
+button {
+  cursor: pointer;
+  color: white;
+  border: none;
+  font-size: 15px;
+}
+
+.nav-button, .add-todo-button {
+  background-color: #4CAF50;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.todo-grid, .todo-input-grid{
+  display: grid;
+  row-gap: 10px;
+  align-items: center;
+}
+
+.todo-input-grid {
+  margin-bottom: 10px;
+  grid-template-columns: 200px 150px 100px 100px ;
+  column-gap: 10px;
+}
+.todo-grid {
+  grid-template-columns: 205px 205px 205px 205px 205px 205px;
+  column-gap: 12px;
+}
+
+.due-date-input, .name-input, .due-time-input {
+  font-size: 15px;
+  padding: 6px;
+}
+
+.add-todo-button {
+  background-color: green;
+}
+
+.delete-todo-button {
+  background-color: darkred;
+  padding: 10px;
+}
+
+.edit-todo-button {
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.status-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.status-column {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  min-height: 80vh;
+}
+
+#pending { background-color: #fff3f3; }
+#in-progress { background-color: #fff9e6; }
+#completed { background-color: #f3fff3; }
+
+.task-card {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  user-select: none;
+}
