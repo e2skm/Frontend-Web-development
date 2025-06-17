@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo List</title>
+  <link rel="stylesheet" href="styles/todo.css">
+</head>
+<body>
+  <nav>
+    <button class="nav-button js-nav-to-index" >Add Tasks</button>
+    <button class="nav-button js-nav-to-track">View Daily Progress</button>
+  </nav>
+  
+  <p>Todo List</p>
+  <div class="todo-input-grid">
+    <input class="js-name-input name-input" type="text" placeholder="Todo name">
+    <input class="js-due-date-input due-date-input" type="date">
+    <input class="js-due-time-input due-time-input" type="time">
+    <button class="add-todo-button js-add-todo-button">
+      Add
+    </button>
+  </div>
+  <div class="js-todo-list todo-grid"></div>
+
+  <script src="scripts/todo.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task Status</title>
+  <link rel="stylesheet" href="styles/todo.css">
+</head>
+<body>
+  <nav>
+    <button class="nav-button" onclick="window.location.href='index.html'">Add Tasks</button>
+    <button class="nav-button" onclick="window.location.href='track.html'">View Status</button>
+  </nav>
+
+  <div class="status-container">
+    <div class="status-column" id="pending" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h2>Pending</h2>
+      <div class="tasks-list" id="pending-tasks"></div>
+    </div>
+    
+    <div class="status-column" id="in-progress" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h2>In Progress</h2>
+      <div class="tasks-list" id="in-progress-tasks"></div>
+    </div>
+    
+    <div class="status-column" id="completed" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h2>Completed</h2>
+      <div class="tasks-list" id="completed-tasks"></div>
+    </div>
+  </div>
+
+  <script src="scripts/todo.js"></script>
+</body>
+</html>
