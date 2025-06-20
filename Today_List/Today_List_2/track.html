@@ -1,0 +1,30 @@
+<!-- track.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Productivity Score</title>
+  <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+  <nav>
+    <button class="nav-button" onclick="window.location.href='index.html'">Add Tasks</button>
+    <button class="nav-button" onclick="window.location.href='track.html'">View PS</button>
+  </nav>
+
+  <div class="calendar-view">
+    <div class="calendar-header">
+      <button class="nav-button js-prev-month">&lt;</button>
+      <h2 class="js-current-month">June 2025</h2>
+      <button class="nav-button js-next-month">&gt;</button>
+    </div>
+    <div class="calendar-grid" id="calendar-grid"></div>
+  </div>
+
+  <div class="ps-history">
+    <h2>Daily Productivity Score</h2>
+    <div class="js-ps-history ps-history-container"></div>
+  </div>
+
+  <script src="todo.js"></script>
+</body>
+</html>

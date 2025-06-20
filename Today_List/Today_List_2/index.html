@@ -1,0 +1,44 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Today List</title>
+  <link rel="stylesheet" href="today_list.css">
+</head>
+<body>
+  <nav>
+    <button class="nav-button js-nav-to-index">Add Tasks</button>
+    <button class="nav-button js-nav-to-track">Daily Progress</button>
+  </nav>
+  
+  <div class="title-and-score-data">
+    <h1 class="today-list-title">Today List</h1>
+    <div>
+      <h1 class="count-down">7</h1>
+    </div>
+    <div class="js-productivity-score productivity-score">
+      <p class="js-daily-score daily-score"></p>
+      <p class="js-current-score current-score"></p>
+    </div> 
+  </div>  
+
+  <div class="todo-input-grid">
+    <input class="js-name-input name-input" type="text" placeholder="Task name">
+    <input class="js-due-date-input due-date-input" type="date">
+    <input class="js-due-time-input due-time-input" type="time">
+    <select class="js-complexity-input complexity-input">
+      <option selected value="1">Level 1</option>
+      <option value="2">Level 2</option>
+      <option value="3">Level 3</option>
+      <option value="4">Level 4</option>
+      <option value="5">Level 5</option>
+    </select>
+    <button class="add-todo-button js-add-todo-button">
+      Add
+    </button>
+  </div>
+  <div class="js-todo-list todo-grid"></div>
+
+  <script src="today_list.js"></script>
+</body>
+</html>
