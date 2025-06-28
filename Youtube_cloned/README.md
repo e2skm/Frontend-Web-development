@@ -39,10 +39,6 @@ This project is a **static clone of the YouTube website**, built as part of my j
 ---
 
 ## 🚀 How to Run This Project
-
-### 🔗 **View Live:**  
-*(If hosted, paste the link here, e.g., GitHub Pages)*
-
 ### 🖥️ **Run Locally:**
 
 1. Clone this repository:
