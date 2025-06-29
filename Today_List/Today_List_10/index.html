@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Today List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="today_list.css">
+</head>
+<body>
+  <!-- Progress Tracking Modal -->
+  <div class="modal progress-modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Historical Progress</h2>
+      <div class="calendar-controls">
+        <button class="prev-month">&lt;</button>
+        <h3 class="current-month-year">June 2025</h3>
+        <button class="next-month">&gt;</button>
+      </div>
+      <div class="calendar-grid"></div>
+      <div class="day-details hidden">
+        <h3 class="detail-date"></h3>
+        <p>Completion Rate: <span class="detail-completion"></span></p>
+        <p>Total Points: <span class="detail-total-points"></span></p>
+        <p>Earned Points: <span class="detail-earned-points"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recurring Tasks Modal -->
+  <div class="modal recurring-tasks-modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Recurring Tasks</h2>
+      <div class="recurring-form">
+        <input type="text" class="js-recurring-name" placeholder="Task name">
+        <select class="js-recurring-frequency">
+          <option value="daily">Daily</option>
+          <option value="specific">Specific Days</option>
+        </select>
+        <input type="time" class="js-recurring-time"> <!-- Added time input -->
+        <div class="days-of-week hidden">
+          <label><input type="checkbox" value="0"> Sun</label>
+          <label><input type="checkbox" value="1"> Mon</label>
+          <label><input type="checkbox" value="2"> Tue</label>
+          <label><input type="checkbox" value="3"> Wed</label>
+          <label><input type="checkbox" value="4"> Thu</label>
+          <label><input type="checkbox" value="5"> Fri</label>
+          <label><input type="checkbox" value="6"> Sat</label>
+        </div>
+        <select class="js-recurring-complexity">
+          <option value="1">Level 1</option>
+          <option value="2">Level 2</option>
+          <option value="3">Level 3</option>
+          <option value="4">Level 4</option>
+          <option value="5">Level 5</option>
+        </select>
+        <button class="add-recurring-button">Add Recurring Task</button>
+        <button class="update-recurring-button hidden">Update Recurring Task</button> <!-- Edit button -->
+      </div>
+      <div class="recurring-tasks-list"></div>
+    </div>
+  </div>
+
+  <div class="title-and-score-data">
+    <div>
+      <h1 class="today-list-title">Today List</h1>
+      <button class="mode-toggle-button" title="Click to switch to dark mode"><img class="mode-toggle-icon" src="icons/moon.png" alt=""></button>
+      <button class="view-deleted-tasks-button" title="View deleted tasks for today"><img class="view-deleted-tasks-icon" src="icons/delete.png" alt=""></button>
+      <button class="view-done-tasks-button" title="View done tasks for today"><img class="view-done-tasks-icon" src="icons/checkmark.png" alt=""></button>
+      <button class="countdown-toggle-button" title="Click to show countdown"><img class="countdown-toggle-icon" src="icons/hour-glass (1).png" alt=""></button>     
+      <button class="track-progess-button" title="View daily performance"><img class="track-progess-icon" src="icons/track.png" alt=""></button>
+      <button class="access-recurring-tasks-button" title="Access recurring tasks"><img class="access-recurring-tasks-icon" src="icons/repeat.png" alt=""></button>       
+    </div>
+    <div class="count-down-container">
+      <div class="countdown-display js-countdown-display hidden">
+        <p><span class="count-down"></span> left</p>
+      </div>
+    </div>
+    
+    <div class="stats-container">
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th>Total tasks for today</th>
+            <th>Tasks left</th>
+            <th>Tasks completed</th>
+            <th>Completion rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="js-total-daily-tasks">0</td>
+            <td class="js-pending-tasks">0</td>
+            <td class="js-completed-tasks">0</td>
+            <td class="js-completion-rate">0%</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <table class="points-table">
+        <tbody>
+          <tr>
+            <th>Total Daily points:</th>
+            <td class="js-daily-score daily-score">0 pts</td>
+          </tr>
+          <tr>
+            <th>Current points:</th>
+            <td class="js-current-score current-score">0 pts</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>  
+  <div class="todo-input-grid">
+    <input class="js-name-input name-input" type="text" placeholder="Task name">
+    <input class="js-due-date-input due-date-input" type="date">
+    <input class="js-due-time-input due-time-input" type="time">
+    <select class="js-complexity-input complexity-input">
+      <option selected value="1">Level 1</option>
+      <option value="2">Level 2</option>
+      <option value="3">Level 3</option>
+      <option value="4">Level 4</option>
+      <option value="5">Level 5</option>
+    </select>
+    <button class="add-todo-button js-add-todo-button">
+      Add
+    </button>
+  </div>
+  <div class="js-todo-list todo-grid"></div>
+
+  <script src="today_list.js"></script>
+</body>
+</html>
