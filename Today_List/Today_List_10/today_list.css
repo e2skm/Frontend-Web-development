@@ -195,6 +195,14 @@ body.dark-mode .points-table td {
   color: #f0f0f0;
 }
 
+/* Table border colors for dark mode */
+body.dark-mode .stats-table th,
+body.dark-mode .stats-table td,
+body.dark-mode .points-table th,
+body.dark-mode .points-table td {
+  border-color: #444;
+}
+
 body.dark-mode input,
 body.dark-mode select {
   background-color: #2d2d2d;
