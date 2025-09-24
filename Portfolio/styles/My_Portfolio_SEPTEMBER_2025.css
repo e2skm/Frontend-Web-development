@@ -65,6 +65,41 @@ nav ul li a:hover {
   color: #0056b3;
 }
 
+/* Active section highlighting for navbar */
+nav ul li a.active {
+  color: #0056b3 !important;
+  position: relative;
+}
+
+nav ul li a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0056b3;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Dark mode support for active link */
+body.dark nav ul li a.active {
+  color: #0056b3 !important;
+}
+
+body.dark nav ul li a.active::after {
+  background-color: #0056b3;
+}
+
 /* Home Section Styles */
 #home {
   padding: 50px 20px;
@@ -242,7 +277,7 @@ nav ul li a:hover {
 .project:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  border-left: 4px solid #0056b3;
+  border: 4px solid #0056b3;
 }
 
 .project img {
@@ -350,7 +385,7 @@ nav ul li a:hover {
 .experience:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  border-left: 4px solid #0056b3;
+  border: 4px solid #0056b3;
 }
 
 .experience img {
@@ -515,6 +550,7 @@ nav ul li a:hover {
 .certificate:hover {
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  border: 4px solid #0056b3;
 }
 
 .certificate:hover img {
