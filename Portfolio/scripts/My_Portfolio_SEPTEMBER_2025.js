@@ -8,22 +8,30 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Active section highlighting for navbar
+// Active section highlighting for navbar - FIXED VERSION
 function setActiveSection() {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav ul li a');
     
     let currentSection = '';
+    const pageBottom = window.innerHeight + window.scrollY;
+    const documentHeight = document.documentElement.scrollHeight;
     
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.clientHeight;
-        const sectionId = section.getAttribute('id');
-        
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-            currentSection = sectionId;
-        }
-    });
+    // Check if we're at the bottom of the page (contact section)
+    if (pageBottom >= documentHeight - 10) { // 10px tolerance
+        currentSection = 'contact';
+    } else {
+        // Regular section detection for other sections
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionHeight = section.clientHeight;
+            const sectionId = section.getAttribute('id');
+            
+            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                currentSection = sectionId;
+            }
+        });
+    }
     
     navLinks.forEach(link => {
         link.classList.remove('active');
@@ -76,7 +84,7 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.add('fade-in');
             
             // Add staggered animation for items within the section
-            const items = entry.target.querySelectorAll('.project, .experience, .skill, .certificate');
+            const items = entry.target.querySelectorAll('.project, .experience, .tech-category, .certificate');
             items.forEach((item, index) => {
                 setTimeout(() => {
                     item.style.opacity = '1';
@@ -89,7 +97,7 @@ const observer = new IntersectionObserver((entries) => {
 
 sections.forEach(section => {
     // Initialize items with hidden state
-    const items = section.querySelectorAll('.project, .experience, .skill, .certificate');
+    const items = section.querySelectorAll('.project, .experience, .tech-category, .certificate');
     items.forEach(item => {
         item.style.opacity = '0';
         item.style.transform = 'translateY(20px)';
